@@ -30,13 +30,13 @@ def main():
     print('\n############ Clean files ############\n')
     for k in range(1, 11):
         print(f'Expected excentricity : 0.{k - 1}')
-        getExcentricity('img/ellipse' + str(k) + '.png', name='Clean ellipse ' + str(k))
+        getExcentricity('Tests_Ellipses/img/ellipse' + str(k) + '.png', name='Clean ellipse ' + str(k))
 
     print('\n############ Noised files ############\n')
     for k in range(1, 11):
         try:
             print(f'Expected excentricity : 0.{k - 1}')
-            getExcentricity('img/ellipse' + str(k) + 'noise.png', name='Noise ellipse ' + str(k), threshold=True)
+            getExcentricity('Tests_Ellipses/img/ellipse' + str(k) + 'noise.png', name='Noise ellipse ' + str(k), threshold=True)
         except cv.error:
             print('Error occurred : bad contour\n')
 
